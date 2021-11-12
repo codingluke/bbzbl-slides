@@ -1,4 +1,9 @@
+---
+marp: true
+---
+
 <!--
+marp: true
 theme: bbzbl
 class:
  - invert

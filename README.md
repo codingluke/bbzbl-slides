@@ -1,3 +1,6 @@
+---
+marp: true
+---
 <!--
 theme: bbzbl
 class:
