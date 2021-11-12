@@ -15,7 +15,7 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so marp-action can access it
     - uses: actions/checkout@v2
 
-    - name: Build & Deploy Readme to GitHub Pages
+    - name: Home
       env: 
         MARP_ARGS: "README.md -o index.html"
 
@@ -30,7 +30,22 @@ jobs:
       # https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepsuses
       uses: ralexander-phi/marp-action@master
       
-    - name: Build & Deploy Handlungskompetenzen to GitHub Pages
+    - name: Modul 431
+      env: 
+        MARP_ARGS: "./modul-431/README.md -o ./modul-431/index.html"
+
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_REPOSITORY: ${{ github.repository }}
+        PUBLISH_TO_BRANCH: live
+        
+        # You'll want to set this to your domain
+        BASE_URL: https://codingluke.github.io/bbzbl-slides/
+
+      # consider using a tagged release here
+      # https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepsuses
+      uses: ralexander-phi/marp-action@master
+      
+    - name: Handlungskompetenzen
       env: 
         MARP_ARGS: "./modul-431/handlungskompetenzen/README.md -o ./modul-431/handlungskompetenzen/index.html"
 
