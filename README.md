@@ -3,8 +3,6 @@ marp: true
 ---
 <!--
 theme: bbzbl
-class:
- - invert
 headingDivider: 1
 paginate: true
 -->
