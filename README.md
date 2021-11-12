@@ -2,7 +2,7 @@
 theme: gaia
 class:
  - invert
-headingDivider: 2
+headingDivider: 1
 paginate: true
 -->
 
@@ -10,8 +10,6 @@ paginate: true
 
 Hier findet ihr alle Slides von meinen Modulen.
 Einfach weiter blättern, viel Spass beim stöbern!
-
----
 
 # Modul 431
 
