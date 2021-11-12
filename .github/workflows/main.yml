@@ -32,7 +32,7 @@ jobs:
       
     - name: Build & Deploy Handlungskompetenzen to GitHub Pages
       env: 
-        MARP_ARGS: "./modul-431/handlungskompetenzen.md -o ./modul-431/index.html"
+        MARP_ARGS: "./modul-431/handlungskompetenzen/README.md -o ./modul-431/handlungskompetenzen/index.html"
 
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GITHUB_REPOSITORY: ${{ github.repository }}
