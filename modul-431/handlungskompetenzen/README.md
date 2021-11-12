@@ -1,5 +1,5 @@
 <!--
-theme: gaia
+theme: bbzbl
 class:
  - invert
 headingDivider: 2
