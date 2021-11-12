@@ -17,7 +17,7 @@ jobs:
 
     - name: Home
       env: 
-        MARP_ARGS: "./README.md -o ./index.html --theme ./themes/custom-theme.css"
+        MARP_ARGS: "./README.md -o ./index.html --theme ./themes/bbzbl-marp-theme.css"
 
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GITHUB_REPOSITORY: ${{ github.repository }}
@@ -32,7 +32,7 @@ jobs:
       
     - name: Modul 431
       env: 
-        MARP_ARGS: "./modul-431/README.md -o ./modul-431/index.html --theme ./themes/custom-theme.css"
+        MARP_ARGS: "./modul-431/README.md -o ./modul-431/index.html --theme ./themes/bbzbl-marp-theme.css"
 
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GITHUB_REPOSITORY: ${{ github.repository }}
@@ -47,7 +47,7 @@ jobs:
       
     - name: Handlungskompetenzen
       env: 
-        MARP_ARGS: "./modul-431/handlungskompetenzen/README.md -o ./modul-431/handlungskompetenzen/index.html --theme ./themes/custom-theme.css"
+        MARP_ARGS: "./modul-431/handlungskompetenzen/README.md -o ./modul-431/handlungskompetenzen/index.html --theme ./themes/bbzbl-marp-theme.css"
 
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GITHUB_REPOSITORY: ${{ github.repository }}
