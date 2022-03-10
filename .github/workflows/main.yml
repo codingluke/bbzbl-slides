@@ -9,6 +9,13 @@ on:
     branches: [ dev ]
 
 jobs:
+  vuepress:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Vuepress
+      uses: codingluke/bbzbl-module-page-action@main
+
   build:
     runs-on: ubuntu-latest
     steps:
