@@ -13,57 +13,62 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Vuepress
+    - name: Vuepress Live
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_REPOSITORY: ${{ github.repository }}
+        PUBLISH_TO_BRANCH: live
+        BASE_URL: https://codingluke.github.io/bbzbl-slides/
       uses: codingluke/bbzbl-module-page-action@main
 
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so marp-action can access it
-    - uses: actions/checkout@v2
+  # build:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   # Checks-out your repository under $GITHUB_WORKSPACE, so marp-action can access it
+  #   - uses: actions/checkout@v2
 
-    - name: Home
-      env: 
-        MARP_ARGS: "./README.md -o ./index.html --theme ./themes/bbzbl-marp-theme.css"
+  #   - name: Home
+  #     env: 
+  #       MARP_ARGS: "./README.md -o ./index.html --theme ./themes/bbzbl-marp-theme.css"
 
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        GITHUB_REPOSITORY: ${{ github.repository }}
-        PUBLISH_TO_BRANCH: live
-        
-        # You'll want to set this to your domain
-        BASE_URL: https://codingluke.github.io/bbzbl-slides/
+  #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       GITHUB_REPOSITORY: ${{ github.repository }}
+  #       PUBLISH_TO_BRANCH: live
+  #       
+  #       # You'll want to set this to your domain
+  #       BASE_URL: https://codingluke.github.io/bbzbl-slides/
 
-      # consider using a tagged release here
-      # https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepsuses
-      uses: ralexander-phi/marp-action@master
-      
-    - name: Modul 431
-      env: 
-        MARP_ARGS: "./modul-431/README.md -o ./modul-431/index.html --theme ./themes/bbzbl-marp-theme.css"
+  #     # consider using a tagged release here
+  #     # https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepsuses
+  #     uses: ralexander-phi/marp-action@master
+  #     
+  #   - name: Modul 431
+  #     env: 
+  #       MARP_ARGS: "./modul-431/README.md -o ./modul-431/index.html --theme ./themes/bbzbl-marp-theme.css"
 
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        GITHUB_REPOSITORY: ${{ github.repository }}
-        PUBLISH_TO_BRANCH: live
-        
-        # You'll want to set this to your domain
-        BASE_URL: https://codingluke.github.io/bbzbl-slides/
+  #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       GITHUB_REPOSITORY: ${{ github.repository }}
+  #       PUBLISH_TO_BRANCH: live
+  #       
+  #       # You'll want to set this to your domain
+  #       BASE_URL: https://codingluke.github.io/bbzbl-slides/
 
-      # consider using a tagged release here
-      # https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepsuses
-      uses: ralexander-phi/marp-action@master
-      
-    - name: Handlungskompetenzen
-      env: 
-        MARP_ARGS: "./modul-431/handlungskompetenzen/README.md -o ./modul-431/handlungskompetenzen/index.html --theme ./themes/bbzbl-marp-theme.css"
+  #     # consider using a tagged release here
+  #     # https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepsuses
+  #     uses: ralexander-phi/marp-action@master
+  #     
+  #   - name: Handlungskompetenzen
+  #     env: 
+  #       MARP_ARGS: "./modul-431/handlungskompetenzen/README.md -o ./modul-431/handlungskompetenzen/index.html --theme ./themes/bbzbl-marp-theme.css"
 
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        GITHUB_REPOSITORY: ${{ github.repository }}
-        PUBLISH_TO_BRANCH: live
-        
-        # You'll want to set this to your domain
-        BASE_URL: https://codingluke.github.io/bbzbl-slides/
+  #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       GITHUB_REPOSITORY: ${{ github.repository }}
+  #       PUBLISH_TO_BRANCH: live
+  #       
+  #       # You'll want to set this to your domain
+  #       BASE_URL: https://codingluke.github.io/bbzbl-slides/
 
-      # consider using a tagged release here
-      # https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepsuses
-      uses: ralexander-phi/marp-action@master
-      
+  #     # consider using a tagged release here
+  #     # https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepsuses
+  #     uses: ralexander-phi/marp-action@master
+  #     
