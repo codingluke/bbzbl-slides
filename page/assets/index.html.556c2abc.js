@@ -1,0 +1,1 @@
+const e={key:"v-ae15bcba",path:"/modul-431/handlungskompetenzen/",title:"Handlungskompetenzen",lang:"en-US",frontmatter:{marp:!0},excerpt:"",headers:[],git:{updatedTime:1647075134e3,contributors:[{name:"Lukas Hodel",email:"lukas.hodel@swisscom.com",commits:1}]},filePathRelative:"modul-431/handlungskompetenzen/README.md"};export{e as data};
